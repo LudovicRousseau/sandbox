@@ -1,16 +1,16 @@
-========================================================================
-        PyKCS11 - PKCS#11 Wrapper for Python - Project Overview
-========================================================================
+=======================================================
+PyKCS11 - PKCS#11 Wrapper for Python - Project Overview
+=======================================================
 
 Authors
-"""""""
+=======
 
 - Copyright (C) 2004 Midori (midori -- a-t -- paipai dot net)
 - Copyright (C) 2006-2017 Ludovic Rousseau (ludovic.rousseau@free.fr)
 
 
 Licence
-"""""""
+=======
 
  This file is free software; you can redistribute it and/or modify it
  under the terms of the GNU General Public License as published by
@@ -27,11 +27,11 @@ Licence
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
 API
-"""
+===
 The API documentation is available at http://pkcs11wrap.sourceforge.net/api/
 
 Unix Howto
-""""""""""
+==========
 To install::
 
     $ make build
@@ -39,7 +39,7 @@ To install::
 
 
 Windows Howto
-"""""""""""""
+=============
 
 Prerequisites
 
@@ -59,7 +59,7 @@ cd to PyKCS11 folder and run::
 
 
 Known Bugs
-""""""""""
+==========
 
 If in Windows the linker complains that the Python24_d.lib doesn't exists
 Please edit the "SWIG-Install-Dir\Lib\python\python.swg" file and replace
@@ -82,7 +82,7 @@ that doesn't come with the standard distribution.
 
 
 History
-"""""""
+=======
 
 1.4.1 - February 2017, Ludovic Rousseau
     - fix compilation under Python 3
