@@ -85,10 +85,12 @@ History
 =======
 
 1.4.1 - February 2017, Ludovic Rousseau
+
     - fix compilation under Python 3
     - add rsa encryption sample program
 
 1.4.0 - February 2017, Ludovic Rousseau
+
     - fix closeAllSessions() and move it Session to PKCS11Lib
     - add RSAOAEPMechanism to support RSA Encryption
     - add DigestSession which enables multi-part digesting
@@ -99,6 +101,7 @@ History
     - fix dumpit.py sample for Python 3
 
 1.3.3 - November 2016, Ludovic Rousseau
+
     - PKCS#11 definitions: sync with Cryptoki version 2.40
       . add missing CKM_* and CKP_* defines
     - Add generateKey() with default mechanism CKM_AES_KEY_GEN
@@ -111,6 +114,7 @@ History
     - some minor improvements
 
 1.3.2 - January 2016, Ludovic Rousseau
+
     - Add wrappers for C_Verify, C_WrapKey, C_UnwrapKey
     - PKCS#11 definitions: sync with Cryptoki version 2.30
     - Generate CKM[CKM_VENDOR_DEFINED+x] values on the fly
@@ -121,6 +125,7 @@ History
     - Small bugs fixed
 
 1.3.1 - October 2015, Ludovic Rousseau
+
     - PKCS#11 definitions: sync with Cryptoki version 2.30
     - Add user type CK_CONTEXT_SPECIFIC
     - Fixes #9, incorrect assignment of pParameter for CK_MECHANISMs.
@@ -134,6 +139,7 @@ History
     - small bugs fixed
 
 1.3.0 - July 2014, Ludovic Rousseau
+
     - add Python3 support
 
 1.2.4 - April 2012, Ludovic Rousseau
@@ -143,6 +149,7 @@ History
     - add createObject()
 
 1.2.3 - December 2010, Ludovic Rousseau
+
     - Add new classes CK_SLOT_INFO, CK_INFO, CK_SESSION_INFO,
       CK_MECHANISM_INFO and CK_TOKEN_INFO instead of the low level ones
       to have a __repr__() method.  It is now possible to just print an
@@ -155,10 +162,12 @@ History
       interface
 
 1.2.2 - June 2010, Ludovic Rousseau
+
     Debug low level C_GenerateRandom
     Add seedRandom() and generateRandom() in the high level API
 
 1.2.1 - November 2008, Ludovic Rousseau
+
     Use src/opensc/pkcs11.h instead of src/rsaref/* files since the
      files from RSA are not free enough (no right to distribute modified
      versions for example)
@@ -166,20 +175,25 @@ History
     bug fixes
 
 1.2.0 - August 2008, Ludovic Rousseau
+
     add getMechanismList() and getMechanismInfo()
     add Session().getSessionInfo()
     bug fixes
 
 1.1.1 - December 2006, Giuseppe Amato (Midori)
+
     bug fixes
 
 1.1.0 - August 2006, Ludovic Rousseau
+
     Introduce high level API
 
 1.0.2 - July 2006, Ludovic Rousseau
+
     port to Unix (tested on GNU/Linux only)
     explicit call to SWIG to generate the wrapper
 
 1.0.1 - 2004 Giuseppe Amato (Midori)
+
     first version
     Windows only
