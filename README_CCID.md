@@ -46,16 +46,16 @@ Debug informations:
 ===================
 
 The driver uses the debug function provided by pcscd. So if pcscd sends
-its debug to stdout (pcscd --foreground) then the CCID driver will also
+its debug to stdout (`pcscd --foreground`) then the CCID driver will also
 send its debug to stdout. If pcscd sends its debug to syslog (by
 default) then the CCID driver will also send its debug to syslog.
 
-You can change the debug level using the Info.plist configuration file.
-The Info.plist is installed, by default, in
+You can change the debug level using the `Info.plist` configuration file.
+The `Info.plist` file is installed, by default, in
 `/usr/local/pcsc/drivers/ifd-ccid.bundle/Contents/Info.plist`
 or set the environment variable `LIBCCID_ifdLogLevel`.
 
-The debug level is set in the ifdLogLevel field. It is a binary OR
+The debug level is set in the `ifdLogLevel`  field. It is a binary OR
 combination of 4 different levels.
 - 1: critical: important error messages
 - 2: info:     informative messages like what reader was detected
@@ -67,7 +67,7 @@ combination of 4 different levels.
 By default the debug level is set to 3 (1 + 2) and correspond to the
 critical and info levels.
 
-You have to restart the driver so it read the configuration file again
+You have to restart the driver so it reads the configuration file again
 and use the new debug level value.  To restart the driver you just need
 to unplug all your CCID readers so the driver is unloaded and then replug
 your readers. You can also restart pcscd.
@@ -76,11 +76,11 @@ your readers. You can also restart pcscd.
 Voltage selection
 =================
 
-You can change the voltage level using the Info.plist configuration
-file.  The Info.plist is installed, by default, in
+You can change the voltage level using the `Info.plist` configuration
+file.  The `Info.plist` is installed, by default, in
 `/usr/local/pcsc/drivers/ifd-ccid.bundle/Contents/Info.plist`
 
-The voltage level is set in the ifdDriverOptions field. It is a binary OR
+The voltage level is set in the `ifdDriverOptions` field. It is a binary OR
 combination of 4 different levels.
 
 -  0: power on the card at 5V (default value)
@@ -88,10 +88,10 @@ combination of 4 different levels.
 - 32: power on the card at 1.8V, then 3V and then 5V
 - 48: let the reader decide
 
-By default the voltage level is set to 0 and correspond to 5V.
+By default the voltage level is set to 0 and corresponds to 5V.
 
-You have to restart the driver so it read the configuration file again
-and use the new debug level value.  To restart the driver you just need
+You have to restart the driver so it reads the configuration file again
+and use the new voltage level value.  To restart the driver you just need
 to unplug all your CCID readers so the driver is unloaded and then replug
 your readers.  You can also restart pcscd.
 
@@ -119,27 +119,27 @@ History:
 
 1.4.31 - 10 August 2019, Ludovic Rousseau
     - Add support of
-     . ACS ACR1252 Reader
-     . Aladdin R.D. JaCartaReader
-     . Alcor Link AK9563
-     . AvestUA AvestKey
-     . Avtor SecureToken (idProduct: 0x0020)
-     . Bit4id TokenME EVO v2
-     . Bit4id miniLector AIR EVO
-     . Bit4id miniLector Blue
-     . Broadcom Corp 58200 (idProduct: 0x5843)
-     . Broadcom Corp 58200 (idProduct: 0x5844)
-     . Broadcom Corp 58200 (idProduct: 0x5845)
-     . Certgate GmbH ONEKEY ID 2 USB
-     . HID Global Crescendo Key 0x0028
-     . HID Global Crescendo Key 0x0029
-     . HID Global Crescendo Key 0x002B
-     . HID Global Crescendo Key 0x002D
-     . Identiv SCR3500 C Contact Reader
-     . InfoCert WirelessKey
-     . NXP PN7462AU CCID
-     . Route1 MobiKEY Fusion3
-     . SPECINFOSYSTEMS DIAMOND token
+     - ACS ACR1252 Reader
+     - Aladdin R.D. JaCartaReader
+     - Alcor Link AK9563
+     - AvestUA AvestKey
+     - Avtor SecureToken (idProduct: 0x0020)
+     - Bit4id TokenME EVO v2
+     - Bit4id miniLector AIR EVO
+     - Bit4id miniLector Blue
+     - Broadcom Corp 58200 (idProduct: 0x5843)
+     - Broadcom Corp 58200 (idProduct: 0x5844)
+     - Broadcom Corp 58200 (idProduct: 0x5845)
+     - Certgate GmbH ONEKEY ID 2 USB
+     - HID Global Crescendo Key 0x0028
+     - HID Global Crescendo Key 0x0029
+     - HID Global Crescendo Key 0x002B
+     - HID Global Crescendo Key 0x002D
+     - Identiv SCR3500 C Contact Reader
+     - InfoCert WirelessKey
+     - NXP PN7462AU CCID
+     - Route1 MobiKEY Fusion3
+     - SPECINFOSYSTEMS DIAMOND token
     - MacOSX/configure: fix checking error for dynamic library libusb
     - Some minor improvements for debug
 
