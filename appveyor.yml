@@ -1,3 +1,3 @@
 version: '1.0.{build}'
 build_script:
-- cmd: type /proc/cpuinfo
+- ps: Get-WmiObject –class Win32_processor | ft systemname,Name,DeviceID,NumberOfCores,NumberOfLogicalProcessors, Addresswidth
