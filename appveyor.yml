@@ -2,8 +2,8 @@ version: '1.0.{build}'
 
 init:
  - c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
- - c:\msys64\usr\bin\bash -lc "pacman -Syu --noconfirm"
- - c:\msys64\usr\bin\bash -lc "pacman -Syu --noconfirm"
+ - c:\msys64\usr\bin\bash -lc "pacman -Su --noconfirm"
+ - c:\msys64\usr\bin\bash -lc "pacman -Su --noconfirm"
  - c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
 
 build_script:
