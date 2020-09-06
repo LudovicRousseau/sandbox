@@ -1,10 +1,10 @@
 version: '1.0.{build}'
 
-init: >-
-    c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
-    c:\msys64\usr\bin\bash -lc "pacman -Syu"
-    c:\msys64\usr\bin\bash -lc "pacman -Syu"
-    c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
+init:
+ - c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
+ - c:\msys64\usr\bin\bash -lc "pacman -Syu"
+ - c:\msys64\usr\bin\bash -lc "pacman -Syu"
+ - c:\msys64\usr\bin\bash -lc "pacman -Ss libffi"
 
 build_script:
 - ps: Get-WmiObject –class Win32_processor | ft systemname,Name,DeviceID,NumberOfCores,NumberOfLogicalProcessors, Addresswidth
