@@ -10,7 +10,7 @@ working group.
 * [2] http://www.usb.org/developers/docs/devclass_docs/DWG_Smart-Card_USB-ICC_ICCD_rev10.pdf
 
 Authors:
-========
+--------
 
 - Ludovic Rousseau <ludovic.rousseau@free.fr>
 - Carlos Prados for the PPS and ATR parsing code (taken from his
@@ -20,7 +20,7 @@ Authors:
 
 
 CCID and ICCD readers:
-======================
+----------------------
 
 A reader can be in one of these list:
 - supported
@@ -34,7 +34,7 @@ A reader can be in one of these list:
 
 
 Supported operating systems:
-============================
+----------------------------
 
 - GNU/Linux (libusb 1.0)
 - MacOS X/Darwin (libusb 1.0)
@@ -43,7 +43,7 @@ See also https://ccid.apdu.fr/ for more information.
 
 
 Debug informations:
-===================
+-------------------
 
 The driver uses the debug function provided by pcscd. So if pcscd sends
 its debug to stdout (`pcscd --foreground`) then the CCID driver will also
@@ -74,7 +74,7 @@ your readers. You can also restart pcscd.
 
 
 Voltage selection
-=================
+-----------------
 
 You can change the voltage level using the `Info.plist` configuration
 file.  The `Info.plist` is installed, by default, in
@@ -97,7 +97,7 @@ your readers.  You can also restart pcscd.
 
 
 Licence:
-========
+--------
 
   This library is free software; you can redistribute it and/or modify it
 under the terms of the GNU Lesser General Public License as published by
@@ -115,7 +115,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 
 History:
-========
+--------
 
 1.4.31 - 10 August 2019, Ludovic Rousseau
    - Add support of
