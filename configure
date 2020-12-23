@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$RUNNER_OS" == "Linux" ]; then
+	# apt install important_linux_software
+	echo "Linux"
+elif [ "$RUNNER_OS" == "Windows" ]; then
+	#choco install important_windows_software
+	echo "Windows"
+elif [ "$RUNNER_OS" == "macOS" ]; then
+	#choco install important_windows_software
+	echo "Windows"
+else
+	echo "$RUNNER_OS not supported"
+	exit 1
+fi
