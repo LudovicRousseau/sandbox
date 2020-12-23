@@ -8,7 +8,7 @@ elif [ "$RUNNER_OS" == "Windows" ]; then
 	echo "Windows"
 elif [ "$RUNNER_OS" == "macOS" ]; then
 	#choco install important_windows_software
-	echo "Windows"
+	echo "macOS"
 else
 	echo "$RUNNER_OS not supported"
 	exit 1
