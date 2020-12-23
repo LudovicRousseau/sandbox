@@ -28,11 +28,11 @@ jobs:
 
       - name: setup prerequisites
         shell: bash
-        env:
-          CONF: ${{ matrix.conf }}
         run: env
 
       - name: compile
         shell: bash
+        env:
+          CONF: ${{ matrix.conf }}
         run: |
           make
