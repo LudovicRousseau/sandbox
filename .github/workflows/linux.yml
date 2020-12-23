@@ -1,4 +1,4 @@
-name: GNU/Linux build
+name: build
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -13,7 +13,12 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        conf: [werror, goffice]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,6 +28,8 @@ jobs:
 
       - name: setup prerequisites
         shell: bash
+        env:
+          CONF: ${{ matrix.conf }}
         run: env
 
       - name: compile
