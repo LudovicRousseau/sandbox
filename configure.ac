@@ -33,5 +33,30 @@ if test "x$use_gettext" != xno ; then
 fi
 AM_CONDITIONAL(WITH_GETTEXT, test "${use_gettext}" != "no")
 
+# Check for some target-specific stuff
+ATR_PARSER="ATR_analysis"
+AS_CASE(["$host"],
+    [*-*-darwin*],
+        [PCSC_LIBS=${PCSC_LIBS:--framework PCSC}
+        PCSC_PATH="PCSC/"
+        ATR_PARSER="no"],
+    [*-*-msys],
+        [PCSC_LIBS=-lwinscard
+        ATR_PARSER="no"])
+
+dnl Checks for libraries.
+# check pcsc-lite
+PKG_CHECK_EXISTS([libpcsclite],
+    [PKG_CHECK_MODULES(PCSC, libpcsclite, [],
+    [
+    if test -f /usr/local/lib/pkgconfig/libpcsclite.pc -a "x$PKG_CONFIG" != x ; then
+        AC_MSG_ERROR([use PKG_CONFIG_PATH=/usr/local/lib/pkgconfig ./configure])
+      else
+        AC_MSG_WARN([install pcsc-lite])
+      fi
+    ])],
+    [AC_MSG_WARN([libpcsclite not found by pkg-config])]
+)
+
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
