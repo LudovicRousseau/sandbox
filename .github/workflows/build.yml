@@ -26,6 +26,7 @@ jobs:
             autoconf
             autoconf-archive
             automake
+            pkg-config
             gettext:p
 
       - name: CI-Build
