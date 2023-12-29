@@ -31,5 +31,5 @@ jobs:
       - name: CI-Build
         run: |
           echo 'Running in MSYS2!'
-          ./bootsrtap
+          ./bootstrap
           ./configure
