@@ -11,33 +11,6 @@ on:
 # A workflow run is made up of one or more jobs that can run
 # sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        conf: [werror, goffice]
-        os: [ubuntu-latest, macos-latest, windows-latest]
-
-    # Steps represent a sequence of tasks that will be executed as part
-    # of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job
-      # can access it
-      - uses: actions/checkout@v2
-
-      - name: setup prerequisites
-        shell: bash
-        run: env
-
-      - name: compile
-        shell: bash
-        env:
-          CONF: ${{ matrix.conf }}
-        run: |
-          make
-
   msys2-ucrt64:
     runs-on: windows-latest
     defaults:
@@ -49,7 +22,12 @@ jobs:
         with:
           msystem: UCRT64
           update: true
-          install: git mingw-w64-ucrt-x86_64-gcc
+          pacboy: >-
+            autoconf
+            autoconf-archive
+            automake
+            gettext:p
+
       - name: CI-Build
         run: |
           echo 'Running in MSYS2!'
